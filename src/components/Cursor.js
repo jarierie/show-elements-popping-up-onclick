@@ -5,6 +5,7 @@ import PopComponent from "./PopComponent";
 import image1 from "../assets/meenoi3.jpg";
 import image2 from "../assets/meenoi4.jpg";
 import image3 from "../assets/meenoi5.jpg";
+import gif from "../assets/gif.gif";
 
 const CursorDiv = styled.div`
   width: 50px;
@@ -26,13 +27,13 @@ const Cursor = () => {
     x: 0,
     y: 0,
   });
-  const images = [image1, image2, image3];
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const cursorRef = useRef(null);
 
   const positiveNegative = ["-", "+"];
-
+  const images = [image1, image2, image3, gif];
   //the array of divs
   const divArray = [];
 
@@ -107,11 +108,7 @@ const Cursor = () => {
         y: 0,
         duration: 0,
         onComplete: () => {
-          if (currentImageIndex < images.length - 1) {
-            setCurrentImageIndex(currentImageIndex + 1);
-          } else {
-            setCurrentImageIndex(0);
-          }
+          setCurrentImageIndex(Math.floor(Math.random() * images.length));
         },
       });
   };

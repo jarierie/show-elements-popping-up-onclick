@@ -13,8 +13,9 @@ const PopContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border: none;
   img {
+    border: none;
   }
 `;
 
@@ -26,7 +27,7 @@ const PopComponent = (props) => {
     <>
       <PopContainer ref={ref}>
         <img src={props.image}></img>
-      </PopContainer>{" "}
+      </PopContainer>
     </>
   );
 };

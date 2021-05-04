@@ -34,7 +34,7 @@ const Main = () => {
         <div>
           <img src={image1} alt=''></img>
         </div>
-      </Container>{" "}
+      </Container>
       <Container></Container>
     </>
   );
